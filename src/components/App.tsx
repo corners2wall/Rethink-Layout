@@ -1,17 +1,24 @@
+import Card from './Card/Card'
+import '../styles.css'
+import Input from './Input'
+
 export default function Application() {
   return (
-    <div className="relative h-72 w-96 rounded-2xl border border-violet-100 bg-white">
-      <div className="absolute left-[511px] top-[-158px] h-96 w-96">
-        <div className="absolute left-[869.29px] top-[8.93px] h-96 w-96 origin-top-left rotate-[-179.35deg]" />
-        <div className="absolute left-[692px] top-[354px] h-28 w-28">
-          <div className="absolute left-0 top-0 h-28 w-28">
-            <div className="absolute left-[0.61px] top-[0.62px] h-28 w-28"></div>
-          </div>
-        </div>
-        <div className="absolute left-0 top-[111px] h-24 w-24">
-          <div className="absolute left-[-9.04px] top-[-9.05px] h-28 w-28"></div>
-        </div>
+    <>
+      <div className="flex flex-col gap-2 font-raleway ">
+        <span className="text-lg font-semibold leading-none  text-zinc-600 lg:text-2xl">
+          Most Popular Tools
+        </span>
+        <span className="text-sm leading-none text-zinc-400 lg:text-lg">
+          Explore the trending tools to create your copies fast
+        </span>
       </div>
-    </div>
+      <Input placeholder="Search for templates, projects, etc" />
+
+      {/* <div className="inline-flex h-12 w-80 items-center justify-center">
+        <div className="h-12 w-80 rounded-md border border-gray-200 bg-white shadow" />
+      </div> */}
+      {/* <Card /> */}
+    </>
   )
 }
