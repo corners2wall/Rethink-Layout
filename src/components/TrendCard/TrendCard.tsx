@@ -1,10 +1,14 @@
+import { MediaType } from 'types/common'
 import Pencil from '../../assets/icons/Pencil.svg?react'
 
-interface CardProps {
-  type: string
+interface TrendCardProps {
+  type: MediaType
+  isTrending: boolean
+  title: string
+  description: string
 }
 
-export default function Card({}: CardProps) {
+export default function TrendCard({}: TrendCardProps) {
   return (
     <div className="inline-flex flex-col rounded-lg bg-white p-1.5 shadow">
       <div className="flex items-center justify-between pb-[18px] pr-[6px]">
