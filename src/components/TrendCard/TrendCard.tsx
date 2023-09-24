@@ -21,7 +21,7 @@ export default function TrendCard({
   return (
     <Column className="rounded-lg p-1.5 shadow">
       <div className="flex items-center justify-between pb-[18px] pr-[6px]">
-        <Icon />
+        <Icon className="h-4 w-4" />
         {isTrending && <TrendingArrow />}
       </div>
       <Column className="items-start justify-start gap-3 font-raleway font-semibold">

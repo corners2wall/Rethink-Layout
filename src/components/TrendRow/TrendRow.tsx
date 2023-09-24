@@ -1,5 +1,6 @@
 import Column from 'components/Layout/Column'
 import { ReactNode } from 'react'
+import { useScrollContainer } from 'react-indiana-drag-scroll'
 
 interface TrendRowProps<T> {
   title: string
@@ -12,10 +13,18 @@ export default function TrendRow<T>({
   items,
   renderRowItem
 }: TrendRowProps<T>) {
+  const scrollContainer = useScrollContainer()
+  console.log(scrollContainer)
+
   return (
-    <Column className="gap-3 pb-9 font-raleway ">
+    <Column className="gap-3 pb-6 font-raleway">
       <span className="text-sm font-semibold text-zinc-600">{title}</span>
-      <div className="flex gap-3">{items.map(renderRowItem)}</div>
+      <div
+        className="flex w-full gap-3 overflow-x-auto pb-3"
+        ref={scrollContainer as any}
+      >
+        {items.map(renderRowItem)}
+      </div>
     </Column>
   )
 }
