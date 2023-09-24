@@ -16,7 +16,7 @@ export default function Application() {
   return (
     <div className="flex">
       <Navigation />
-      <Column className="w-full">
+      <Column className="min-w-0">
         <TopControl />
         <Column className="relative mb-8 rounded-b-3xl bg-[#F1EDFD] bg-heder-texture bg-cover bg-no-repeat px-4 pb-[74px] text-zinc-600 md:mx-3 lg:rounded-3xl">
           <MobileMenu />
