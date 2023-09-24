@@ -6,9 +6,6 @@ module.exports = {
     fontFamily: {
       raleway: ['Raleway', 'sans-serif']
     },
-    backgroundImage: {
-      'heder-texture': "url('src/assets/icons/Background.svg')"
-    },
     fontSize: {
       xs: '12px',
       sm: '14px',
