@@ -1,1 +1,1 @@
-export type MediaType = 'BLOG' | 'ARTICLE' | 'DESCRIPTION'
+export type MediaType = 'BLOG' | 'ARTICLE' | 'PRODUCT'

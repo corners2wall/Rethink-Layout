@@ -1,5 +1,7 @@
 import { MediaType } from 'types/common'
-import Pencil from '../../assets/icons/Pencil.svg?react'
+import { MediaTypeMap } from './const'
+import TrendingArrow from '../../assets/icons/TrendingArrow.svg?react'
+import Column from 'components/Layout/Column'
 
 interface TrendCardProps {
   type: MediaType
@@ -8,22 +10,24 @@ interface TrendCardProps {
   description: string
 }
 
-export default function TrendCard({}: TrendCardProps) {
+export default function TrendCard({
+  type,
+  isTrending,
+  title,
+  description
+}: TrendCardProps) {
+  const Icon = MediaTypeMap[type]
+
   return (
-    <div className="inline-flex flex-col rounded-lg bg-white p-1.5 shadow">
+    <Column className="rounded-lg p-1.5 shadow">
       <div className="flex items-center justify-between pb-[18px] pr-[6px]">
-        <Pencil />
-        <Pencil />
+        <Icon />
+        {isTrending && <TrendingArrow />}
       </div>
-      <div className="flex h-20 flex-col items-start justify-start gap-3">
-        <span className="text-center font-['Raleway'] text-sm font-semibold text-slate-900">
-          Blog writing
-        </span>
-        <div className="w-32 font-['Raleway'] text-xs text-zinc-500">
-          Generate the best blog post to fit your audience with just few clicks
-          of a button
-        </div>
-      </div>
-    </div>
+      <Column className="items-start justify-start gap-3 font-raleway font-semibold">
+        <span className="text-center text-sm text-slate-900">{title}</span>
+        <div className="w-32 text-[11px] text-zinc-500">{description}</div>
+      </Column>
+    </Column>
   )
 }
