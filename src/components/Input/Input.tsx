@@ -1,11 +1,12 @@
 import Search from '../../assets/icons/Search.svg?react'
 interface InputProps {
   placeholder: string
+  className?: string
 }
 
-export default function Input({ placeholder }: InputProps) {
+export default function Input({ placeholder, className }: InputProps) {
   return (
-    <div className="relative">
+    <div className={`relative ${className}`}>
       <Search className="pointer-events-none absolute left-[13px] top-2/4 translate-y-[-50%]	" />
       <input
         placeholder={placeholder}

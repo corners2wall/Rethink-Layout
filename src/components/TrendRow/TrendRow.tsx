@@ -17,8 +17,10 @@ export default function TrendRow<T>({
   console.log(scrollContainer)
 
   return (
-    <Column className="gap-3 pb-6 font-raleway">
-      <span className="text-sm font-semibold text-zinc-600">{title}</span>
+    <Column className="gap-3 pb-6 font-raleway lg:gap-5">
+      <span className="text-sm font-semibold text-zinc-600 lg:text-xl">
+        {title}
+      </span>
       <div
         className="flex w-full gap-3 overflow-x-auto pb-3"
         ref={scrollContainer as any}

@@ -1,7 +1,7 @@
 import { ForwardedRef, forwardRef } from 'react'
 
 interface ColumnProps {
-  className: string
+  className?: string
   children: React.ReactNode
   forwardRef?: any //ForwardedRef<HTMLDivElement>
 }
