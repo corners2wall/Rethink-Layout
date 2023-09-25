@@ -4,11 +4,13 @@ interface ButtonProps {
   type?: ButtonType
   label: string
   onClick?(): void
+  buttonType?: 'submit' | 'reset' | 'button'
 }
 
 export default function Button({
   label,
   type = 'PRIMARY',
+  buttonType = 'button',
   onClick
 }: ButtonProps) {
   const textClass = 'text-base font-semibold'
@@ -17,6 +19,7 @@ export default function Button({
     <button
       className={`${textClass} ${ButtonClassNamesMap[type]}`}
       onClick={onClick}
+      type={buttonType}
     >
       {label}
     </button>

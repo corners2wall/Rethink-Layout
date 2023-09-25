@@ -1,5 +1,4 @@
 import TrendCard from 'components/TrendCard/TrendCard'
-import 'styles.css'
 import Input from 'components/Input'
 import TrendRow from 'components/TrendRow/TrendRow'
 import { trendingData } from 'data/mockData'
@@ -9,10 +8,10 @@ import Welcome from 'components/Welcome'
 import Navigation from 'components/Navigation'
 import TopControl from 'components/TopControl'
 import MobileMenu from 'components/MobileMenu'
-import Button from './Button'
-import Select from './Select'
+import Button from 'components/Button'
+import Select from 'components/Select'
 
-export default function Application() {
+export default function Home() {
   return (
     <div className="flex">
       <Navigation />

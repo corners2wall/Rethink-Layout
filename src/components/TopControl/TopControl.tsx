@@ -8,8 +8,8 @@ import Input from 'components/Input'
 
 export default function TopControl() {
   return (
-    <div className="sticky top-0 z-10 hidden grid-cols-4 pb-[36px] lg:grid">
-      <div className="col-span-3 flex items-center justify-between border border-[#6b59b1] px-3 py-[17px]">
+    <div className="sticky top-0 z-10 mb-[36px] hidden grid-cols-4 bg-white lg:grid">
+      <div className="col-span-3 flex items-center justify-between border border-[#6b59b1] bg-white px-3 py-[17px] pb-[3px]">
         <Input
           placeholder="Search for templates, projects, etc"
           className="w-2/5"
