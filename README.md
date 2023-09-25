@@ -1,5 +1,11 @@
 ## RETHINK LAYOUT
 
+I was in a hurry and wrote the code rather quickly, so the components turned out terrible. Looks like this is my vail, I'll rewrite it as soon as possible
+
+You can change width of screen for see mobile/desktop layout
+
+[Build](https://rethink-layout.web.app/home).
+
 ## What is inside?
 
 This project uses many tools like:
